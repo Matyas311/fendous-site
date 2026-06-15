@@ -1,41 +1,45 @@
+import logoImg from "../assets/logo.png";
+
 interface HeroSectionProps {
   years: number;
-  companyName: string;
   tagline: string;
   dateRange: string;
-  pillars: string[];
+  threeIs: string[];
 }
 
 export default function HeroSection({
   years,
-  companyName,
   tagline,
   dateRange,
-  pillars,
+  threeIs,
 }: HeroSectionProps) {
   return (
-    <main className="min-h-screen bg-brand-dark text-white flex flex-col items-center justify-center px-6 py-20">
-      <div className="mb-8 text-brand-violet text-sm tracking-widest uppercase">
-        {companyName}
+    <main className="min-h-screen bg-brand-dark text-white flex flex-col items-center justify-center px-6 py-20 relative">
+      {/* Logo */}
+      <div className="absolute top-6 left-6">
+        <img src={logoImg} alt="Logo" className="w-48" />
       </div>
 
-      <div className="text-center mb-6">
-        <h1 className="text-8xl font-black leading-none bg-gradient-to-r from-brand-pink via-brand-magenta to-brand-violet bg-clip-text text-transparent">
+      {/* Main title */}
+      <div className="flex items-center gap-6 mb-6">
+        <h1 className="text-[18rem] font-black leading-none bg-gradient-to-b from-brand-pink via-brand-magenta to-brand-violet bg-clip-text text-transparent">
           {years}
         </h1>
-        <h2 className="text-4xl md:text-6xl font-black tracking-tight mt-2">
-          YEARS OF
-          <span className="bg-gradient-to-r from-brand-pink to-brand-violet bg-clip-text text-transparent">
+        <div className="flex flex-col">
+          <span className="text-6xl md:text-8xl font-black tracking-tight text-white/80">
+            YEARS OF
+          </span>
+          <span className="text-6xl md:text-8xl font-black tracking-tight bg-gradient-to-r from-brand-pink to-brand-violet bg-clip-text text-transparent">
             FENDOUS
           </span>
-        </h2>
+        </div>
       </div>
 
       <div className="flex items-center gap-4 text-brand-violet text-sm tracking-[0.3em] uppercase mb-6">
-        {pillars.map((pillar, i) => (
+        {threeIs.map((pillar, i) => (
           <>
             <span key={pillar}>{pillar}</span>
-            {i < pillars.length - 1 && (
+            {i < threeIs.length - 1 && (
               <span className="text-brand-pink">·</span>
             )}
           </>
