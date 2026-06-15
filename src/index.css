@@ -8,3 +8,8 @@
   --color-brand-dark: #0A0618;
   --color-brand-card: #110C2A;
 }
+
+html {
+  background: linear-gradient(135deg, #0A0618 0%, #110C2A 50%, #0D0820 100%);
+  min-height: 100%;
+}

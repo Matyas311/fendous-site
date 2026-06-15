@@ -14,7 +14,7 @@ export default function HeroSection({
   threeIs,
 }: HeroSectionProps) {
   return (
-    <main className="min-h-screen bg-brand-dark text-white flex flex-col items-center justify-center px-6 py-20 relative">
+    <main className="min-h-screen text-white flex flex-col items-center justify-center px-6 py-18 relative">
       {/* Logo */}
       <div className="absolute top-6 left-6">
         <img src={logoImg} alt="Logo" className="w-48" />
@@ -37,12 +37,12 @@ export default function HeroSection({
 
       <div className="flex items-center gap-4 text-brand-violet text-sm tracking-[0.3em] uppercase mb-6">
         {threeIs.map((pillar, i) => (
-          <>
-            <span key={pillar}>{pillar}</span>
+          <span key={pillar} className="flex items-center gap-4">
+            {pillar}
             {i < threeIs.length - 1 && (
-              <span className="text-brand-pink">·</span>
+              <span className="text-brand-pink mx-2">·</span>
             )}
-          </>
+          </span>
         ))}
       </div>
 
