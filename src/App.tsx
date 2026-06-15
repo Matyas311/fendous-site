@@ -2,7 +2,7 @@ import ExecutionSection from "./components/ExecutionSection";
 import HeroSection from "./components/HeroSection";
 import JourneySection from "./components/JourneySection";
 import { Package, Network, Headphones } from "lucide-react";
-import { GraduationCap, Handshake, Users, Globe } from "lucide-react";
+import { GraduationCap, Handshake, Users, Earth } from "lucide-react";
 
 function App() {
   return (
@@ -62,35 +62,35 @@ function App() {
         cards={[
           {
             id: 1,
-            icon: <GraduationCap size={32} className="text-brand-violet" />,
+            icon: <GraduationCap size={48} className="text-brand-violet" />,
             title: "DTU Collaboration",
             subtitle: "Knowledge exchange.",
             description: "Innovation together.",
           },
           {
             id: 2,
-            icon: <Handshake size={32} className="text-brand-magenta" />,
+            icon: <Handshake size={48} className="text-brand-magenta" />,
             title: "Built Partnerships",
             subtitle: "Stronger ecosystem.",
             description: "Greater impact.",
           },
           {
             id: 3,
-            icon: <Users size={32} className="text-brand-pink" />,
+            icon: <Users size={48} className="text-brand-pink" />,
             title: "Onboarded 3 Customers",
             subtitle: "Early trust.",
             description: "Long-term vision.",
           },
           {
             id: 4,
-            icon: <Globe size={32} className="text-brand-violet" />,
+            icon: <Earth size={48} className="text-brand-violet" />,
             title: "Offered Horizontal Solutions",
             subtitle: "Across industries.",
             description: "Across use cases.",
           },
           {
             id: 5,
-            icon: <Users size={32} className="text-brand-purple" />,
+            icon: <Users size={48} className="text-brand-purple" />,
             title: "Served 50+ Talents",
             subtitle: "Empowered people.",
             description: "Built future-ready teams.",

@@ -23,20 +23,20 @@ export default function ExecutionSection({
       </h2>
 
       {/* Cards */}
-      <div className="grid grid-cols-5 gap-6 w-full max-w-5xl">
+      <div className="grid grid-cols-5 gap-8 w-full max-w-6xl">
         {cards.map((card) => (
           <div
             key={card.id}
-            className="bg-brand-card border border-brand-purple rounded-xl p-6 flex flex-col items-center text-center hover:border-brand-pink hover:shadow-[0_0_20px_rgba(233,30,140,0.2)] transition-all duration-300"
+            className="bg-brand-card border border-brand-purple rounded-2xl p-8 flex flex-col items-center text-center hover:border-brand-pink hover:shadow-[0_0_30px_rgba(233,30,140,0.2)] transition-all duration-300"
           >
-            <div className="mb-4">{card.icon}</div>
-            <h3 className="text-white font-black text-sm tracking-wide uppercase mb-1">
+            <div className="mb-6">{card.icon}</div>
+            <h3 className="text-white font-black text-base tracking-wide uppercase mb-2">
               {card.title}
             </h3>
-            <p className="text-brand-pink text-xs font-bold mb-3">
+            <p className="text-white/50 text-sm leading-relaxed">
               {card.subtitle}
             </p>
-            <p className="text-white/50 text-xs leading-relaxed">
+            <p className="text-white/50 text-sm leading-relaxed">
               {card.description}
             </p>
           </div>
