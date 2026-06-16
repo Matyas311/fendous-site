@@ -3,6 +3,8 @@ import HeroSection from "./components/HeroSection";
 import JourneySection from "./components/JourneySection";
 import { Package, Network, Headphones } from "lucide-react";
 import { GraduationCap, Handshake, Users, Earth } from "lucide-react";
+import { CodeXml, BrainCircuit, Lock, Sprout } from "lucide-react";
+import PillarsSection from "./components/PillarSection";
 
 function App() {
   return (
@@ -94,6 +96,36 @@ function App() {
             title: "Served 50+ Talents",
             subtitle: "Empowered people.",
             description: "Built future-ready teams.",
+          },
+        ]}
+      />
+      <PillarsSection
+        heading="Our Pillars"
+        subheading="Powering everything we build"
+        pillars={[
+          {
+            id: 1,
+            icon: <CodeXml size={56} className="text-brand-violet" />,
+            title: "IT Solutions",
+            description: "Robust. Scalable. Future-ready.",
+          },
+          {
+            id: 2,
+            icon: <BrainCircuit size={56} className="text-brand-pink" />,
+            title: "AI Solutions",
+            description: "Intelligent. Adaptive. Transformative.",
+          },
+          {
+            id: 3,
+            icon: <Lock size={56} className="text-brand-violet" />,
+            title: "Security Solutions",
+            description: "Secure by design. Trust in every layer.",
+          },
+          {
+            id: 4,
+            icon: <Sprout size={56} className="text-brand-pink" />,
+            title: "ESG Intelligence",
+            description: "Sustainable. Responsible. Future-focused.",
           },
         ]}
       />
