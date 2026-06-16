@@ -1,10 +1,27 @@
 import ExecutionSection from "./components/ExecutionSection";
 import HeroSection from "./components/HeroSection";
 import JourneySection from "./components/JourneySection";
-import { Package, Network, Headset } from "lucide-react";
-import { GraduationCap, Handshake, Users, Earth } from "lucide-react";
-import { CodeXml, BrainCircuit, Lock, Sprout } from "lucide-react";
 import PillarsSection from "./components/PillarSection";
+import ProductShowcaseSection from "./components/ProductShowcaseSection";
+
+import {
+  Package,
+  Network,
+  Headset,
+  GraduationCap,
+  Handshake,
+  Users,
+  Earth,
+  CodeXml,
+  BrainCircuit,
+  Lock,
+  Sprout,
+  QrCode,
+  Smartphone,
+  CalendarHeart,
+} from "lucide-react";
+
+import productImg from "./assets/ProductShowcaseImg.png";
 
 function App() {
   return (
@@ -134,6 +151,40 @@ function App() {
             description: "Sustainable. Responsible. Future-focused.",
             glowColor:
               "hover:shadow-[0px_0px_60px_15px_rgba(233,_30,_140,_0.5)]", // pink
+          },
+        ]}
+      />
+      <ProductShowcaseSection
+        eyebrow="Celebrating Our Core Product Solution"
+        productName="Fendous.Live"
+        tagline="Event Management, Reimagined."
+        subtagline="Smart. Seamless. Secure."
+        image={productImg}
+        features={[
+          {
+            id: 1,
+            icon: <QrCode size={64} className="text-brand-violet" />,
+            title: "QR Check-in",
+            description: "Fast, secure and contactless check-ins.",
+          },
+          {
+            id: 2,
+            icon: (
+              <div className="relative">
+                <Smartphone size={64} className="text-brand-violet" />
+                <span className="absolute -bottom-2 -right-4 bg-[#635BFF] text-white text-[12px] font-bold px-1.5 py-0.5 rounded">
+                  stripe
+                </span>
+              </div>
+            ),
+            title: "Mobile & Stripe Payments",
+            description: "Seamless payments anytime, anywhere.",
+          },
+          {
+            id: 3,
+            icon: <CalendarHeart size={64} className="text-brand-violet" />,
+            title: "Built for Experiences",
+            description: "Conferences, workshops, webinars, meetings and more.",
           },
         ]}
       />

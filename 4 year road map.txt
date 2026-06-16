@@ -10,5 +10,16 @@ jednoduše editovatelný kontent skrz kód (foto a text)
 
 DEADLINE 24.6.
 
+Hero — 4 Years of Fendous
+Our Journey — timeline
+Execution — 5 cards
+Our Pillars — IT, AI, Security, ESG
+Fendous Live — product showcase
+2026 Focus — what's next
+Photo Carousel — team throughout the years
+Thank You — closing block
+
 15.6.
 Created the hero, our journey and the execution block for the website
+16.6.
+Continuous progress added pillars and fendous.live product showcase block
