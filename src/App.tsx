@@ -1,7 +1,7 @@
 import ExecutionSection from "./components/ExecutionSection";
 import HeroSection from "./components/HeroSection";
 import JourneySection from "./components/JourneySection";
-import { Package, Network, Headphones } from "lucide-react";
+import { Package, Network, Headset } from "lucide-react";
 import { GraduationCap, Handshake, Users, Earth } from "lucide-react";
 import { CodeXml, BrainCircuit, Lock, Sprout } from "lucide-react";
 import PillarsSection from "./components/PillarSection";
@@ -54,7 +54,7 @@ function App() {
             circles: [
               { label: "Products", icon: <Package size={16} /> },
               { label: "Solutions", icon: <Network size={16} /> },
-              { label: "Services", icon: <Headphones size={16} /> },
+              { label: "Services", icon: <Headset size={16} /> },
             ],
           },
         ]}
@@ -108,24 +108,32 @@ function App() {
             icon: <CodeXml size={56} className="text-brand-violet" />,
             title: "IT Solutions",
             description: "Robust. Scalable. Future-ready.",
+            glowColor:
+              "hover:shadow-[0px_0px_60px_15px_rgba(155,_93,_229,_0.5)]", // violet
           },
           {
             id: 2,
             icon: <BrainCircuit size={56} className="text-brand-pink" />,
             title: "AI Solutions",
             description: "Intelligent. Adaptive. Transformative.",
+            glowColor:
+              "hover:shadow-[0px_0px_60px_15px_rgba(233,_30,_140,_0.5)]", // pink
           },
           {
             id: 3,
             icon: <Lock size={56} className="text-brand-violet" />,
             title: "Security Solutions",
             description: "Secure by design. Trust in every layer.",
+            glowColor:
+              "hover:shadow-[0px_0px_60px_15px_rgba(155,_93,_229,_0.5)]", // violet
           },
           {
             id: 4,
             icon: <Sprout size={56} className="text-brand-pink" />,
             title: "ESG Intelligence",
             description: "Sustainable. Responsible. Future-focused.",
+            glowColor:
+              "hover:shadow-[0px_0px_60px_15px_rgba(233,_30,_140,_0.5)]", // pink
           },
         ]}
       />

@@ -3,6 +3,7 @@ interface Pillar {
   icon: React.ReactNode;
   title: string;
   description: string;
+  glowColor: string;
 }
 
 interface PillarsSectionProps {
@@ -33,7 +34,7 @@ export default function PillarsSection({
         {pillars.map((pillar) => (
           <div
             key={pillar.id}
-            className="bg-brand-card border border-brand-purple rounded-2xl p-10 flex flex-col items-center text-center hover:border-brand-pink hover:shadow-[0_0_30px_rgba(233,30,140,0.2)] transition-all duration-300"
+            className={`bg-brand-card border border-brand-purple rounded-2xl p-10 flex flex-col items-center text-center hover:border-brand-pink transition-all duration-300 ${pillar.glowColor}`}
           >
             <div className="mb-6">{pillar.icon}</div>
             <h3 className="text-2xl font-black text-white mb-3">
