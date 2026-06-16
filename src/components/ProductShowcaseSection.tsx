@@ -23,7 +23,10 @@ export default function ProductShowcaseSection({
   image,
 }: ProductShowcaseSectionProps) {
   return (
-    <section className="min-h-screen text-white flex flex-col items-center justify-center px-12 py-20">
+    <section
+      className="min-h-screen text-white flex flex-col items-center justify-center px-12 py-20"
+      bg-brand-PSbg
+    >
       {/* Header */}
       <div className="text-center mb-16">
         <p className="text-brand-pink text-sm tracking-widest uppercase mb-4">
