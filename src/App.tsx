@@ -3,6 +3,7 @@ import HeroSection from "./components/HeroSection";
 import JourneySection from "./components/JourneySection";
 import PillarsSection from "./components/PillarSection";
 import ProductShowcaseSection from "./components/ProductShowcaseSection";
+import FocusSection from "./components/FocusSection";
 
 import {
   Package,
@@ -19,9 +20,15 @@ import {
   QrCode,
   Smartphone,
   CalendarHeart,
+  UserPlus,
+  HandCoins,
+  SquareActivity,
 } from "lucide-react";
 
 import productImg from "./assets/ProductShowcaseImg.png";
+import humanImg from "./assets/humanOriented.jpg";
+import financeImg from "./assets/finance.jpg";
+import healthcareImg from "./assets/healthcare.jpg";
 
 function App() {
   return (
@@ -185,6 +192,41 @@ function App() {
             icon: <CalendarHeart size={64} className="text-brand-violet" />,
             title: "Built for Experiences",
             description: "Conferences, workshops, webinars, meetings and more.",
+          },
+        ]}
+      />
+      <FocusSection
+        heading="2026 Focus"
+        subheading="Building App Solutions With Purpose"
+        description="Human-oriented. Finance. Healthcare. Impact that matters."
+        goals={[
+          {
+            id: 1,
+            icon: <UserPlus size={40} className="text-brand-pink" />,
+            title: "Human Oriented",
+            description: "People-first. Purpose-driven.",
+            glowColor:
+              "hover:shadow-[0px_0px_60px_15px_rgba(233,_30,_140,_0.5)]",
+            img: humanImg,
+          },
+          {
+            id: 2,
+            icon: <HandCoins size={40} className="text-brand-violet" />,
+            title: "Finance",
+            description:
+              "Intelligent solutions for a stronger financial future.",
+            glowColor:
+              "hover:shadow-[0px_0px_60px_15px_rgba(155,_93,_229,_0.5)]",
+            img: financeImg,
+          },
+          {
+            id: 3,
+            icon: <SquareActivity size={40} className="text-brand-pink" />,
+            title: "Healthcare",
+            description: "Secure. Connected. Compassionate care through tech.",
+            glowColor:
+              "hover:shadow-[0px_0px_60px_15px_rgba(233,_30,_140,_0.5)]",
+            img: healthcareImg,
           },
         ]}
       />
