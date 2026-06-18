@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 interface Pillar {
   id: number;
   icon: React.ReactNode;
@@ -31,19 +33,27 @@ export default function PillarsSection({
 
       {/* Grid */}
       <div className="grid grid-cols-2 gap-8 w-full max-w-4xl">
-        {pillars.map((pillar) => (
-          <div
+        {pillars.map((pillar, i) => (
+          <motion.div
             key={pillar.id}
-            className={`bg-brand-card border border-brand-purple rounded-2xl p-10 flex flex-col items-center text-center hover:border-brand-pink transition-all duration-300 ${pillar.glowColor}`}
+            initial={{ opacity: 0, x: i % 2 === 0 ? -50 : 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: false, amount: 0.3 }}
+            transition={{ duration: 0.6, delay: i * 0.1 }}
           >
-            <div className="mb-6">{pillar.icon}</div>
-            <h3 className="text-2xl font-black text-white mb-3">
-              {pillar.title}
-            </h3>
-            <p className="text-white/50 text-base leading-relaxed">
-              {pillar.description}
-            </p>
-          </div>
+            <div
+              key={pillar.id}
+              className={`bg-brand-card border border-brand-purple rounded-2xl p-10 flex flex-col items-center text-center hover:border-brand-pink transition-all duration-300 ${pillar.glowColor}`}
+            >
+              <div className="mb-6">{pillar.icon}</div>
+              <h3 className="text-2xl font-black text-white mb-3">
+                {pillar.title}
+              </h3>
+              <p className="text-white/50 text-base leading-relaxed">
+                {pillar.description}
+              </p>
+            </div>
+          </motion.div>
         ))}
       </div>
     </section>
