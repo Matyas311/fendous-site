@@ -1,3 +1,6 @@
+import { motion } from "framer-motion";
+import { useState } from "react";
+
 interface FeatureItem {
   id: number;
   icon: React.ReactNode;
@@ -22,57 +25,65 @@ export default function ProductShowcaseSection({
   features,
   image,
 }: ProductShowcaseSectionProps) {
+  const [shimmer, setShimmer] = useState(false);
   return (
-    <section className="min-h-screen text-white flex flex-col items-center justify-center px-12 py-20">
-      <div className="animated-gradient-border rounded-3xl p-[5px]">
-        <div className="w-full max-w-6xl bg-brand-card border border-brand-purple rounded-3xl p-16">
-          {/* Header */}
-          <div className="text-center mb-16">
-            <p className="text-brand-pink text-sm tracking-widest uppercase mb-4">
-              {eyebrow}
-            </p>
-            <h2 className="text-6xl font-black mb-3">
-              {productName.split(".")[0]}.
-              <span className="bg-brand-pink text-white px-2 rounded-md">
-                {productName.split(".")[1]}
-              </span>
-            </h2>
-            <p className="text-2xl font-bold text-white/80 mb-2">{tagline}</p>
-            <p className="text-brand-violet text-lg font-semibold">
-              {subtagline}
-            </p>
-          </div>
-
-          {/* Features + Image side by side */}
-          <div className="flex items-center justify-between gap-16">
-            {/* Features column */}
-            <div className="flex flex-col gap-12 max-w-sm">
-              {features.map((feature) => (
-                <div key={feature.id} className="flex items-start gap-5">
-                  <div className="flex-shrink-0">{feature.icon}</div>
-                  <div>
-                    <h3 className="text-white font-black text-lg tracking-wide uppercase mb-2">
-                      {feature.title}
-                    </h3>
-                    <p className="text-white/50 text-base leading-relaxed">
-                      {feature.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
+    <section className="h-fit text-white flex flex-col items-center justify-center px-12 py-20">
+      <motion.div
+        className={`relative overflow-hidden flex-1 ${shimmer ? "shimmer-effect play" : "shimmer-effect"}`}
+        onViewportEnter={() => setShimmer(true)}
+        onViewportLeave={() => setShimmer(false)}
+        viewport={{ amount: 0.5 }}
+      >
+        <div className="animated-gradient-border rounded-3xl p-[5px]">
+          <div className="w-full max-w-6xl bg-brand-card border border-brand-purple rounded-3xl p-16">
+            {/* Header */}
+            <div className="text-center mb-16">
+              <p className="text-brand-pink text-sm tracking-widest uppercase mb-4">
+                {eyebrow}
+              </p>
+              <h2 className="text-6xl font-black mb-3">
+                {productName.split(".")[0]}.
+                <span className="bg-brand-pink text-white px-2 rounded-md">
+                  {productName.split(".")[1]}
+                </span>
+              </h2>
+              <p className="text-2xl font-bold text-white/80 mb-2">{tagline}</p>
+              <p className="text-brand-violet text-lg font-semibold">
+                {subtagline}
+              </p>
             </div>
 
-            {/* Product image */}
-            <div className="flex-1">
-              <img
-                src={image}
-                alt="Fendous Live product showcase"
-                className="w-full"
-              />
+            {/* Features + Image side by side */}
+            <div className="flex items-center justify-between gap-16">
+              {/* Features column */}
+              <div className="flex flex-col gap-12 max-w-sm">
+                {features.map((feature) => (
+                  <div key={feature.id} className="flex items-start gap-5">
+                    <div className="flex-shrink-0">{feature.icon}</div>
+                    <div>
+                      <h3 className="text-white font-black text-lg tracking-wide uppercase mb-2">
+                        {feature.title}
+                      </h3>
+                      <p className="text-white/50 text-base leading-relaxed">
+                        {feature.description}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Product image */}
+              <div className="flex-1">
+                <img
+                  src={image}
+                  alt="Fendous Live product showcase"
+                  className="w-full"
+                />
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

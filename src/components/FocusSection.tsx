@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 interface Goal {
   id: number;
   icon: React.ReactNode;
@@ -22,7 +24,6 @@ export default function FocusSection({
 }: FocusSectionProps) {
   return (
     <section className="grid grid-cols-4 gap-8 w-full text-white items-stretch px-25 py-25">
-      {" "}
       {/* Header card */}
       <div className="bg-brand-card border-4 border-brand-magenta rounded-2xl py-10 pl-6">
         <div className="mb-10 pt-2">
@@ -39,9 +40,13 @@ export default function FocusSection({
         </div>
       </div>
       {/* Goal cards */}
-      {goals.map((goal) => (
-        <div
+      {goals.map((goal, i) => (
+        <motion.div
           key={goal.id}
+          initial={{ opacity: 0, y: i % 2 === 0 ? 50 : -50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.3 }}
+          transition={{ duration: 0.6, delay: i * 0.1, ease: "easeOut" }}
           className={`bg-brand-card border border-brand-purple rounded-2xl overflow-hidden flex flex-col hover:border-brand-pink transition-all duration-300 ${goal.glowColor}`}
         >
           {/* Stock image */}
@@ -56,14 +61,14 @@ export default function FocusSection({
           {/* Content */}
           <div className="p-6 flex flex-col items-center text-center">
             <div className="mb-4">{goal.icon}</div>
-            <h3 className="text-white font-black text-xl tracking-wide uppercase mb-2">
+            <h3 className="text-white font-black text-base tracking-wide uppercase mb-2">
               {goal.title}
             </h3>
-            <p className="text-white/50 text-lg leading-relaxed">
+            <p className="text-white/50 text-sm leading-relaxed">
               {goal.description}
             </p>
           </div>
-        </div>
+        </motion.div>
       ))}
     </section>
   );
