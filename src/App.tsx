@@ -23,12 +23,19 @@ import {
   UserPlus,
   HandCoins,
   SquareActivity,
+  Lightbulb,
+  Blocks,
+  Target,
+  BriefcaseBusiness,
+  Globe,
+  Play,
 } from "lucide-react";
 
 import productImg from "./assets/ProductShowcaseImg.png";
 import humanImg from "./assets/humanOriented.jpg";
 import financeImg from "./assets/finance.jpg";
 import healthcareImg from "./assets/healthcare.jpg";
+import logoImg from "./assets/logo.png";
 
 {
   ("carousel photos");
@@ -47,6 +54,7 @@ import img11 from "./assets/carosel/11.png";
 import img12 from "./assets/carosel/12.jpg";
 import img13 from "./assets/carosel/last.jpg";
 import PhotoCarouselSection from "./components/PhotoCarouselSection";
+import ThankYouSection from "./components/ThankYouSection";
 
 function App() {
   return (
@@ -265,6 +273,40 @@ function App() {
           { id: 11, src: img11, alt: "Photo 11" },
           { id: 12, src: img12, alt: "Photo 12" },
           { id: 13, src: img13, alt: "Photo 13" },
+        ]}
+      />
+      <ThankYouSection
+        thankYouHeading="A Big Thank You!"
+        thankYouMessage="To our clients, partners, team and community for being part of our journey."
+        quote="We are no longer just building products. We are building platforms that connect intelligence, trust and execution."
+        closingLine="Here's to the next chapter of innovation and impact."
+        logo={logoImg}
+        tagline="The best is yet to come."
+        websiteUrl="fendous.live"
+        footerItems={[
+          {
+            icon: <Lightbulb size={18} className="text-brand-pink" />,
+            label: "Innovating Today",
+          },
+          {
+            icon: <Blocks size={18} className="text-brand-violet" />,
+            label: "Integrating Tomorrow",
+          },
+          {
+            icon: <Target size={18} className="text-brand-pink" />,
+            label: "Impacting Forever",
+          },
+        ]}
+        socialLinks={[
+          {
+            icon: <BriefcaseBusiness size={20} />,
+            url: "https://www.linkedin.com/company/fendous-com/posts/?feedView=all",
+          },
+          { icon: <Globe size={20} />, url: "https://fendous.com" },
+          {
+            icon: <Play size={20} />,
+            url: "https://www.youtube.com/@fendoussustainablesolutions/featured",
+          },
         ]}
       />
     </>
