@@ -26,8 +26,8 @@ export default function ExecutionSection({
 
       {/* Cards */}
       <motion.div
-        initial={{ opacity: 0, x: -50 }} // starts 50px to the left, invisible
-        whileInView={{ opacity: 1, x: 0 }} // slides to position, fades in
+        initial={{ opacity: 0, x: -50 }}
+        whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: false, amount: 0.3 }}
         transition={{ duration: 0.6 }}
       >

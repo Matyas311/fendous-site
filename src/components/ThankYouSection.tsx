@@ -66,7 +66,6 @@ export default function ThankYouSection({
 
         {/* Socials */}
         <div className="flex gap-4">
-          {/* Website */}
           <a
             href={`https://${websiteUrl}`}
             className="text-white/60 text-sm hover:text-brand-pink transition-colors"
