@@ -1,31 +1,41 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { QrCode, Smartphone, CalendarHeart } from "lucide-react";
+import { useLanguage } from "../context/LanguageContext";
+import productImg from "../assets/product-showcase.png";
 
-interface FeatureItem {
-  id: number;
-  icon: React.ReactNode;
-  title: string;
-  description: string;
-}
-
-interface ProductShowcaseSectionProps {
-  eyebrow: string;
-  productName: string;
-  tagline: string;
-  subtagline: string;
-  features: FeatureItem[];
-  image: string;
-}
-
-export default function ProductShowcaseSection({
-  eyebrow,
-  productName,
-  tagline,
-  subtagline,
-  features,
-  image,
-}: ProductShowcaseSectionProps) {
+export default function ProductShowcaseSection() {
+  const { t } = useLanguage();
   const [shimmer, setShimmer] = useState(false);
+
+  const features = [
+    {
+      id: 1,
+      icon: <QrCode size={56} className="text-brand-violet" />,
+      title: t.product_feature1_title,
+      description: t.product_feature1_desc,
+    },
+    {
+      id: 2,
+      icon: (
+        <div className="relative">
+          <Smartphone size={56} className="text-brand-violet" />
+          <span className="absolute -bottom-1 -right-3 bg-[#635BFF] text-white text-[8px] font-bold px-1.5 py-0.5 rounded">
+            stripe
+          </span>
+        </div>
+      ),
+      title: t.product_feature2_title,
+      description: t.product_feature2_desc,
+    },
+    {
+      id: 3,
+      icon: <CalendarHeart size={56} className="text-brand-violet" />,
+      title: t.product_feature3_title,
+      description: t.product_feature3_desc,
+    },
+  ];
+
   return (
     <section className="h-fit text-white flex flex-col items-center justify-center px-12 py-20">
       <motion.div
@@ -39,17 +49,19 @@ export default function ProductShowcaseSection({
             {/* Header */}
             <div className="text-center mb-16">
               <p className="text-brand-pink text-sm tracking-widest uppercase mb-4">
-                {eyebrow}
+                {t.product_eyebrow}
               </p>
               <h2 className="text-6xl font-black mb-3">
-                {productName.split(".")[0]}.
+                Fendous.
                 <span className="bg-brand-pink text-white px-2 rounded-md">
-                  {productName.split(".")[1]}
+                  Live
                 </span>
               </h2>
-              <p className="text-2xl font-bold text-white/80 mb-2">{tagline}</p>
+              <p className="text-2xl font-bold text-white/80 mb-2">
+                {t.product_tagline}
+              </p>
               <p className="text-brand-violet text-lg font-semibold">
-                {subtagline}
+                {t.product_subtagline}
               </p>
             </div>
 
@@ -75,7 +87,7 @@ export default function ProductShowcaseSection({
               {/* Product image */}
               <div className="flex-1">
                 <img
-                  src={image}
+                  src={productImg}
                   alt="Fendous Live product showcase"
                   className="w-full"
                 />

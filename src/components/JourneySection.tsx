@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { Package, Network, Headphones } from "lucide-react";
+import { useLanguage } from "../context/LanguageContext";
 
 interface CircleItem {
   label: string;
@@ -14,58 +16,82 @@ interface TimelineNode {
   circles?: CircleItem[];
 }
 
-interface JourneySectionProps {
-  heading: string;
-  subheading: string;
-  nodes: TimelineNode[];
-}
-
-export default function JourneySection({
-  heading,
-  subheading,
-  nodes,
-}: JourneySectionProps) {
+export default function JourneySection() {
+  const { t } = useLanguage();
   const [activeNode, setActiveNode] = useState<number | null>(null);
 
+  const nodes: TimelineNode[] = [
+    {
+      id: 1,
+      label: t.journey_node1_label,
+      title: t.journey_node1_title,
+      description: t.journey_node1_desc,
+      items: t.journey_node1_items,
+    },
+    {
+      id: 2,
+      label: t.journey_node2_label,
+      title: t.journey_node2_title,
+      description: t.journey_node2_desc,
+    },
+    {
+      id: 3,
+      label: t.journey_node3_label,
+      title: t.journey_node3_title,
+      description: t.journey_node3_desc,
+      items: t.journey_node3_items,
+    },
+    {
+      id: 4,
+      label: t.journey_node4_label,
+      title: t.journey_node4_title,
+      description: t.journey_node4_desc,
+      circles: [
+        { label: t.journey_node4_items[0], icon: <Package size={16} /> },
+        { label: t.journey_node4_items[1], icon: <Network size={16} /> },
+        { label: t.journey_node4_items[2], icon: <Headphones size={16} /> },
+      ],
+    },
+  ];
+
   return (
-    <section className="h-[vh80] text-white flex flex-col items-center justify-center px-12 py-20">
+    <section className="min-h-screen text-white flex flex-col items-center justify-center px-12 py-20">
       {/* Header */}
       <div className="text-center mb-20">
         <h2 className="text-5xl font-black bg-gradient-to-r from-brand-pink to-brand-violet bg-clip-text text-transparent mb-4">
-          {heading}
+          {t.journey_heading}
         </h2>
-        <p className="text-white/60 text-lg">{subheading}</p>
+        <p className="text-white/60 text-lg">{t.journey_subheading}</p>
       </div>
 
       {/* Timeline */}
       <div className="relative w-full max-w-5xl">
         {/* Cards row */}
-        <div className="relative flex justify-between mb-2 h-[150]">
+        <div className="relative flex justify-between mb-12 h-64">
           {nodes.map((node) => (
             <div
               key={node.id}
-              className={`w-[35%] bg-brand-card border border-brand-purple rounded-xl p-5 transition-all duration-300 flex flex-col justify-between ${
+              className={`w-[22%] bg-brand-card border border-brand-purple rounded-xl p-5 transition-all duration-300 flex flex-col justify-between ${
                 activeNode === node.id
                   ? "opacity-100 translate-y-0 border-brand-pink shadow-[0_0_20px_rgba(233,30,140,0.3)]"
                   : "opacity-0 translate-y-4 pointer-events-none"
               }`}
             >
               <div>
-                <h3 className="text-brand-pink font-bold text-[25px] mb-2">
+                <h3 className="text-brand-pink font-bold text-sm mb-2">
                   {node.title}
                 </h3>
-                <p className="text-white/60 text-[15px] leading-relaxed">
+                <p className="text-white/60 text-xs leading-relaxed">
                   {node.description}
                 </p>
               </div>
 
-              {/* Regular list items */}
               {node.items && (
                 <ul className="mt-3 space-y-1">
                   {node.items.map((item) => (
                     <li
                       key={item}
-                      className="text-brand-violet text-[15px] flex items-center gap-2"
+                      className="text-brand-violet text-xs flex items-center gap-2"
                     >
                       <span className="w-1 h-1 rounded-full bg-brand-pink inline-block" />
                       {item}
@@ -74,7 +100,6 @@ export default function JourneySection({
                 </ul>
               )}
 
-              {/* Overlapping circles */}
               {node.circles && (
                 <div className="flex items-center justify-center mt-3 -space-x-3">
                   {node.circles.map((circle, i) => (
@@ -97,19 +122,14 @@ export default function JourneySection({
 
         {/* Line + nodes */}
         <div className="relative flex items-center">
-          {/* Line */}
-          <div className="absolute left-0 right-4 h-px bg-gradient-to-r from-brand-purple via-brand-pink to-brand-violet" />
-
-          {/* Arrow head */}
+          <div className="absolute bottom-10 left-0 right-4 h-px bg-gradient-to-r from-brand-purple via-brand-pink to-brand-violet" />
           <div
-            className="absolute right-0 w-0 h-0
+            className="absolute bottom-8.5 right-2 w-0 h-0
             border-t-[6px] border-t-transparent
             border-b-[6px] border-b-transparent
-            border-l-[10px] border-l-brand-violet right-2"
+            border-l-[10px] border-l-brand-violet"
           />
-
-          {/* Nodes */}
-          <div className="relative w-[95%] flex justify-between top-5">
+          <div className="relative w-[95%] flex justify-between">
             {nodes.map((node) => (
               <div
                 key={node.id}
@@ -118,7 +138,7 @@ export default function JourneySection({
                 onMouseLeave={() => setActiveNode(null)}
               >
                 <div
-                  className={`w-5 h-5 rounded-full border-2 transition-all duration-300 z-10 -mt-[10px] ${
+                  className={`w-5 h-5 rounded-full border-2 transition-all duration-300 z-10 -mt-[10px] top-5 ${
                     activeNode === node.id
                       ? "bg-brand-pink border-brand-pink scale-150 shadow-[0_0_12px_rgba(233,30,140,0.8)]"
                       : "bg-brand-dark border-brand-purple group-hover:border-brand-pink"

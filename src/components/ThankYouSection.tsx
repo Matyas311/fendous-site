@@ -1,34 +1,87 @@
-interface ThankYouSectionProps {
-  thankYouHeading: string;
-  thankYouMessage: string;
-  quote: string;
-  closingLine: string;
-  logo: string;
-  tagline: string;
-  footerItems: { icon: React.ReactNode; label: string }[];
-  websiteUrl: string;
-  socialLinks: { icon: React.ReactNode; url: string }[];
-}
+import {
+  Lightbulb,
+  Blocks,
+  Target,
+  BriefcaseBusiness,
+  Globe,
+  Play,
+} from "lucide-react";
+import { useLanguage } from "../context/LanguageContext";
+import logoImg from "../assets/logo.png";
 
-export default function ThankYouSection({
-  thankYouHeading,
-  thankYouMessage,
-  quote,
-  closingLine,
-  logo,
-  tagline,
-  footerItems,
-  websiteUrl,
-  socialLinks,
-}: ThankYouSectionProps) {
+export default function ThankYouSection() {
+  const { t } = useLanguage();
+
+  const partners = [
+    "Visma Dinero",
+    "Vipps MobilePay",
+    "International House North Denmark",
+    "BusinessAalborg",
+    "Caspio",
+    "Danish Life Science Cluster",
+    "IDA Selvstændig",
+  ];
+
+  const loopedPartners = [...partners, ...partners];
+
+  const footerItems = [
+    {
+      icon: <Lightbulb size={18} className="text-brand-pink" />,
+      label: t.footer_item1,
+    },
+    {
+      icon: <Blocks size={18} className="text-brand-violet" />,
+      label: t.footer_item2,
+    },
+    {
+      icon: <Target size={18} className="text-brand-pink" />,
+      label: t.footer_item3,
+    },
+  ];
+
+  const socialLinks = [
+    { icon: <BriefcaseBusiness size={20} />, url: "https://linkedin.com" },
+    { icon: <Globe size={20} />, url: "https://fendous.live" },
+    { icon: <Play size={20} />, url: "https://youtube.com" },
+  ];
+
   return (
-    <section className="text-white flex flex-col items-center justify-center  pt-32 pb-8">
-      {/* Thank You */}
-      <div className="text-center mb-16">
-        <h2 className="text-4xl font-black text-brand-pink mb-4">
-          {thankYouHeading}
+    <section className="text-white flex flex-col items-center justify-center px-12 py-32">
+      {/* Thank You heading + message */}
+      <div className="text-center mb-12 max-w-3xl">
+        <h2 className="text-4xl font-black text-brand-pink mb-6">
+          {t.thankyou_heading}
         </h2>
-        <p className="text-white/60 text-lg max-w-xl">{thankYouMessage}</p>
+        <p className="text-white/60 text-lg leading-relaxed">
+          {t.thankyou_message}
+        </p>
+      </div>
+
+      {/* With gratitude to */}
+      <p className="text-white/40 text-sm tracking-widest uppercase mb-6">
+        {t.thankyou_gratitude}
+      </p>
+
+      {/* Partner carousel */}
+      <div className="w-full overflow-hidden mb-12">
+        <div className="flex gap-12 animate-marquee-reverse">
+          {loopedPartners.map((partner, i) => (
+            <span
+              key={`${partner}-${i}`}
+              className="flex-shrink-0 text-xl font-black text-white whitespace-nowrap"
+            >
+              {partner}
+              <span className="text-brand-pink ml-12">·</span>
+            </span>
+          ))}
+        </div>
+      </div>
+
+      {/* Closing paragraph */}
+      <div className="text-center max-w-3xl mb-16">
+        <p className="text-white/60 text-lg leading-relaxed">
+          {t.thankyou_closing}
+        </p>
       </div>
 
       <div className="w-32 h-px bg-gradient-to-r from-brand-purple via-brand-pink to-brand-violet mb-16" />
@@ -36,22 +89,23 @@ export default function ThankYouSection({
       {/* Quote */}
       <div className="text-center max-w-2xl mb-12">
         <p className="text-2xl font-semibold text-white/90 leading-relaxed mb-6">
-          "{quote}"
+          "{t.thankyou_quote}"
         </p>
-        <p className="text-brand-pink text-xl font-bold">{closingLine}</p>
+        <p className="text-brand-pink text-xl font-bold">
+          {t.thankyou_closing_line}
+        </p>
       </div>
 
       {/* Logo + tagline */}
       <div className="flex flex-col items-center mb-24">
-        <img src={logo} alt="Fendous logo" className="w-36 mb-4" />
+        <img src={logoImg} alt="Fendous logo" className="w-24 mb-4" />
         <p className="text-brand-violet font-bold text-lg tracking-wide">
-          {tagline}
+          {t.thankyou_tagline}
         </p>
       </div>
 
       {/* Footer */}
-      <div className="w-full px-64 border-t border-brand-purple pt-8 flex flex-wrap items-center justify-between">
-        {/* Footer items */}
+      <div className="w-full max-w-5xl border-t border-brand-purple pt-8 flex flex-wrap items-center justify-between gap-6">
         <div className="flex gap-8">
           {footerItems.map((item) => (
             <div
@@ -63,15 +117,13 @@ export default function ThankYouSection({
             </div>
           ))}
         </div>
-
-        {/* Socials */}
+        <a
+          href="https://fendous.live"
+          className="text-white/60 text-sm hover:text-brand-pink transition-colors"
+        >
+          fendous.live
+        </a>
         <div className="flex gap-4">
-          <a
-            href={`https://${websiteUrl}`}
-            className="text-white/60 text-sm hover:text-brand-pink transition-colors"
-          >
-            {websiteUrl}
-          </a>
           {socialLinks.map((social, i) => (
             <a
               key={i}

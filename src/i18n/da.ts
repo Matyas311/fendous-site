@@ -1,0 +1,93 @@
+export default {
+  // Hero
+  hero_tagline: "Fra produkter til platforme. Fra vision til reel effekt.",
+  hero_date_range: "2022 – 2026",
+  hero_pillars: ["Innovation", "Integration", "Effekt"],
+
+  // Journey
+  journey_heading: "Vores Rejse",
+  journey_subheading: "En historie om tilpasning, udførelse og effekt.",
+  journey_node1_label: "2022",
+  journey_node1_title: "Vi Startede",
+  journey_node1_desc: "3 kerneprodukter bygget til moderne forretningsbehov.",
+  journey_node1_items: ["Fendous CRM", "Fendous PLS", "Fendous Chatbot"],
+  journey_node2_label: "AI Skift",
+  journey_node2_title: "Markedsforstyrelse med AI",
+  journey_node2_desc: "AI ændrede spillet. Vi ændrede vores strategi.",
+  journey_node3_label: "GAIN",
+  journey_node3_title: "Strategisk Skift",
+  journey_node3_desc: "Vi lancerede GAIN med 4 stærke søjler.",
+  journey_node3_items: ["IT-løsninger", "AI-løsninger", "Sikkerhedsløsninger", "ESG-intelligens"],
+  journey_node4_label: "Model",
+  journey_node4_title: "Integreret Forretningsmodel",
+  journey_node4_desc: "Produkter + løsninger + supporttjenester arbejder sammen.",
+  journey_node4_items: ["Produkter", "Løsninger", "Tjenester"],
+
+  // Execution
+  execution_heading: "Udførelse · Partnerskaber · Mennesker · Effekt",
+  execution_card1_title: "DTU Samarbejde",
+  execution_card1_subtitle: "Vidensudveksling.",
+  execution_card1_desc: "Innovation sammen.",
+  execution_card2_title: "Bygget Partnerskaber",
+  execution_card2_subtitle: "Stærkere økosystem.",
+  execution_card2_desc: "Større effekt.",
+  execution_card3_title: "Ombordtaget 3 Kunder",
+  execution_card3_subtitle: "Tidlig tillid.",
+  execution_card3_desc: "Langsigtet vision.",
+  execution_card4_title: "Tilbudt Horisontale Løsninger",
+  execution_card4_subtitle: "På tværs af brancher.",
+  execution_card4_desc: "På tværs af anvendelsestilfælde.",
+  execution_card5_title: "Betjent 50+ Talenter",
+  execution_card5_subtitle: "Styrkede mennesker.",
+  execution_card5_desc: "Byggede fremtidsparate teams.",
+
+  // Pillars
+  pillars_heading: "Vores Søjler",
+  pillars_subheading: "Driver alt hvad vi bygger",
+  pillars_1_title: "IT-løsninger",
+  pillars_1_desc: "Robust. Skalerbar. Fremtidsklar.",
+  pillars_2_title: "AI-løsninger",
+  pillars_2_desc: "Intelligent. Adaptiv. Transformerende.",
+  pillars_3_title: "Sikkerhedsløsninger",
+  pillars_3_desc: "Sikker by design. Tillid i hvert lag.",
+  pillars_4_title: "ESG-intelligens",
+  pillars_4_desc: "Bæredygtig. Ansvarlig. Fremtidsfokuseret.",
+
+  // Product Showcase
+  product_eyebrow: "Fejring af Vores Kerneproduktløsning",
+  product_tagline: "Eventadministration, Genopfundet.",
+  product_subtagline: "Smart. Problemfri. Sikker.",
+  product_feature1_title: "QR Check-in",
+  product_feature1_desc: "Hurtige, sikre og kontaktløse check-ins.",
+  product_feature2_title: "Mobil & Stripe Betalinger",
+  product_feature2_desc: "Problemfrie betalinger når som helst, hvor som helst.",
+  product_feature3_title: "Bygget til Oplevelser",
+  product_feature3_desc: "Konferencer, workshops, webinarer, møder og mere.",
+
+  // Focus
+  focus_heading: "2026 Fokus",
+  focus_subheading: "Bygger App-løsninger Med Formål",
+  focus_desc: "Menneskeorienteret. Finans. Sundhed. Effekt der betyder noget.",
+  focus_goal1_title: "Menneskeorienteret",
+  focus_goal1_desc: "Mennesker først. Formålsdrevet.",
+  focus_goal2_title: "Finans",
+  focus_goal2_desc: "Intelligente løsninger for en stærkere finansiel fremtid.",
+  focus_goal3_title: "Sundhed",
+  focus_goal3_desc: "Sikker. Forbundet. Medfølende pleje gennem teknologi.",
+
+  // Carousel
+  carousel_heading: "Gennem Årene",
+  carousel_subheading: "Vores team, vores historie",
+
+  // Thank You
+  thankyou_heading: "🤝 Vores Oprigtige Påskønnelse",
+  thankyou_message: "Vi vil gerne rette vores dybeste tak til vores betroede partnere, samarbejdspartnere og professionelle netværk. Jeres støtte, ekspertise og tro på vores vision har spillet en afgørende rolle i vores rejse og succes.",
+  thankyou_gratitude: "Med taknemmelighed til",
+  thankyou_closing: "Vigtigst af alt, tak til alle medarbejdere, praktikanter, konsulenter, rådgivere og bidragydere, der har været en del af Fendous Sustainable Solutions i løbet af de seneste fire år. Jeres dedikation, kreativitet, hårde arbejde og tro på vores vision har hjulpet med at omsætte ideer til løsninger, der skaber reel værdi for virksomheder, samfund og samfundet. Sammen har vi bygget mere end en virksomhed — vi har bygget en platform for innovation, bæredygtighed og positiv effekt. Tak fordi I har hjulpet med at gøre Fendous til en realitet og for at bidrage til en bedre fremtid gennem teknologi, viden og samarbejde.",
+  thankyou_quote: "Vi bygger ikke længere bare produkter. Vi bygger platforme der forbinder intelligens, tillid og udførelse.",
+  thankyou_closing_line: "Her er til det næste kapitel af innovation og effekt.",
+  thankyou_tagline: "Det bedste er endnu ikke kommet.",
+  footer_item1: "Innoverer I Dag",
+  footer_item2: "Integrerer I Morgen",
+  footer_item3: "Påvirker For Altid",
+}

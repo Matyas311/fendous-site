@@ -1,27 +1,53 @@
 import { motion } from "framer-motion";
+import { GraduationCap, Handshake, Users, Globe } from "lucide-react";
+import { useLanguage } from "../context/LanguageContext";
 
-interface ExecutionCard {
-  id: number;
-  icon: React.ReactNode;
-  title: string;
-  subtitle: string;
-  description: string;
-}
+export default function ExecutionSection() {
+  const { t } = useLanguage();
 
-interface ExecutionSectionProps {
-  heading: string;
-  cards: ExecutionCard[];
-}
+  const cards = [
+    {
+      id: 1,
+      icon: <GraduationCap size={48} className="text-brand-violet" />,
+      title: t.execution_card1_title,
+      subtitle: t.execution_card1_subtitle,
+      description: t.execution_card1_desc,
+    },
+    {
+      id: 2,
+      icon: <Handshake size={48} className="text-brand-violet" />,
+      title: t.execution_card2_title,
+      subtitle: t.execution_card2_subtitle,
+      description: t.execution_card2_desc,
+    },
+    {
+      id: 3,
+      icon: <Users size={48} className="text-brand-pink" />,
+      title: t.execution_card3_title,
+      subtitle: t.execution_card3_subtitle,
+      description: t.execution_card3_desc,
+    },
+    {
+      id: 4,
+      icon: <Globe size={48} className="text-brand-violet" />,
+      title: t.execution_card4_title,
+      subtitle: t.execution_card4_subtitle,
+      description: t.execution_card4_desc,
+    },
+    {
+      id: 5,
+      icon: <Users size={48} className="text-brand-violet" />,
+      title: t.execution_card5_title,
+      subtitle: t.execution_card5_subtitle,
+      description: t.execution_card5_desc,
+    },
+  ];
 
-export default function ExecutionSection({
-  heading,
-  cards,
-}: ExecutionSectionProps) {
   return (
     <section className="h-[vh80] text-white flex flex-col items-center justify-center px-12 py-20">
       {/* Header */}
       <h2 className="text-4xl font-black tracking-widest uppercase text-white/80 mb-16">
-        {heading}
+        {t.execution_heading}
       </h2>
 
       {/* Cards */}

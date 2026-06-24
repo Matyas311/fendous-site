@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useLanguage } from "../context/LanguageContext";
 
 interface CarouselImage {
   id: number;
@@ -7,16 +8,13 @@ interface CarouselImage {
 }
 
 interface PhotoCarouselSectionProps {
-  heading: string;
-  subheading: string;
   images: CarouselImage[];
 }
 
 export default function PhotoCarouselSection({
-  heading,
-  subheading,
   images,
 }: PhotoCarouselSectionProps) {
+  const { t } = useLanguage();
   const [selectedImage, setSelectedImage] = useState<CarouselImage | null>(
     null,
   );
@@ -27,10 +25,10 @@ export default function PhotoCarouselSection({
       {/* Header */}
       <div className="text-center mb-16">
         <h2 className="text-4xl font-black tracking-widest uppercase text-white/80 mb-3">
-          {heading}
+          {t.carousel_heading}
         </h2>
         <p className="text-brand-pink text-sm tracking-wider uppercase">
-          {subheading}
+          {t.carousel_subheading}
         </p>
       </div>
 

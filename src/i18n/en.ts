@@ -1,0 +1,93 @@
+export default {
+  // Hero
+  hero_tagline: "From Products to Platforms. From Vision to Real Impact.",
+  hero_date_range: "2022 – 2026",
+  hero_pillars: ["Innovation", "Integration", "Impact"],
+
+  // Journey
+  journey_heading: "Our Journey",
+  journey_subheading: "A story of adaptation, execution and impact.",
+  journey_node1_label: "2022",
+  journey_node1_title: "We Started",
+  journey_node1_desc: "3 core products built for modern business needs.",
+  journey_node1_items: ["Fendous CRM", "Fendous PLS", "Fendous Chatbot"],
+  journey_node2_label: "AI Shift",
+  journey_node2_title: "Market Disruption with AI",
+  journey_node2_desc: "AI changed the game. We changed our strategy.",
+  journey_node3_label: "GAIN",
+  journey_node3_title: "Strategic Shift",
+  journey_node3_desc: "We launched GAIN with 4 powerful pillars.",
+  journey_node3_items: ["IT Solutions", "AI Solutions", "Security Solutions", "ESG Intelligence"],
+  journey_node4_label: "Model",
+  journey_node4_title: "Integrated Business Model",
+  journey_node4_desc: "Products + Solutions + Support Services working together.",
+  journey_node4_items: ["Products", "Solutions", "Services"],
+
+  // Execution
+  execution_heading: "Execution · Partnerships · People · Impact",
+  execution_card1_title: "DTU Collaboration",
+  execution_card1_subtitle: "Knowledge exchange.",
+  execution_card1_desc: "Innovation together.",
+  execution_card2_title: "Built Partnerships",
+  execution_card2_subtitle: "Stronger ecosystem.",
+  execution_card2_desc: "Greater impact.",
+  execution_card3_title: "Onboarded 3 Customers",
+  execution_card3_subtitle: "Early trust.",
+  execution_card3_desc: "Long-term vision.",
+  execution_card4_title: "Offered Horizontal Solutions",
+  execution_card4_subtitle: "Across industries.",
+  execution_card4_desc: "Across use cases.",
+  execution_card5_title: "Served 50+ Talents",
+  execution_card5_subtitle: "Empowered people.",
+  execution_card5_desc: "Built future-ready teams.",
+
+  // Pillars
+  pillars_heading: "Our Pillars",
+  pillars_subheading: "Powering everything we build",
+  pillars_1_title: "IT Solutions",
+  pillars_1_desc: "Robust. Scalable. Future-ready.",
+  pillars_2_title: "AI Solutions",
+  pillars_2_desc: "Intelligent. Adaptive. Transformative.",
+  pillars_3_title: "Security Solutions",
+  pillars_3_desc: "Secure by design. Trust in every layer.",
+  pillars_4_title: "ESG Intelligence",
+  pillars_4_desc: "Sustainable. Responsible. Future-focused.",
+
+  // Product Showcase
+  product_eyebrow: "Celebrating Our Core Product Solution",
+  product_tagline: "Event Management, Reimagined.",
+  product_subtagline: "Smart. Seamless. Secure.",
+  product_feature1_title: "QR Check-in",
+  product_feature1_desc: "Fast, secure and contactless check-ins.",
+  product_feature2_title: "Mobile & Stripe Payments",
+  product_feature2_desc: "Seamless payments anytime, anywhere.",
+  product_feature3_title: "Built for Experiences",
+  product_feature3_desc: "Conferences, workshops, webinars, meetings and more.",
+
+  // Focus
+  focus_heading: "2026 Focus",
+  focus_subheading: "Building App Solutions With Purpose",
+  focus_desc: "Human-oriented. Finance. Healthcare. Impact that matters.",
+  focus_goal1_title: "Human Oriented",
+  focus_goal1_desc: "People-first. Purpose-driven.",
+  focus_goal2_title: "Finance",
+  focus_goal2_desc: "Intelligent solutions for a stronger financial future.",
+  focus_goal3_title: "Healthcare",
+  focus_goal3_desc: "Secure. Connected. Compassionate care through tech.",
+
+  // Carousel
+  carousel_heading: "Through The Years",
+  carousel_subheading: "Our team, our story",
+
+  // Thank You
+  thankyou_heading: "🤝 Our Sincere Appreciation",
+  thankyou_message: "We would like to extend our heartfelt thanks to our trusted partners, collaborators, and professional networks. Your support, expertise, and belief in our vision have played a vital role in our journey and success.",
+  thankyou_gratitude: "With gratitude to",
+  thankyou_closing: "Most importantly, thank you to every employee, intern, consultant, advisor, and contributor who has been part of Fendous Sustainable Solutions over the past four years. Your dedication, creativity, hard work, and belief in our vision have helped transform ideas into solutions that create real value for businesses, communities, and society. Together, we have built more than a company — we have built a platform for innovation, sustainability, and positive impact. Thank you for helping make Fendous a reality and for contributing to a better future through technology, knowledge, and collaboration.",
+  thankyou_quote: "We are no longer just building products. We are building platforms that connect intelligence, trust and execution.",
+  thankyou_closing_line: "Here's to the next chapter of innovation and impact.",
+  thankyou_tagline: "The best is yet to come.",
+  footer_item1: "Innovating Today",
+  footer_item2: "Integrating Tomorrow",
+  footer_item3: "Impacting Forever",
+}

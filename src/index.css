@@ -61,3 +61,13 @@ html {
 .shimmer-effect.play::after {
   animation: shimmer 1.2s ease;
 }
+
+@keyframes marquee-reverse {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+.animate-marquee-reverse {
+  animation: marquee-reverse 20s linear infinite;
+  width: max-content;
+}
