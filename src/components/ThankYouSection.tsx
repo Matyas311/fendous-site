@@ -43,7 +43,7 @@ export default function ThankYouSection({
 
       {/* Logo + tagline */}
       <div className="flex flex-col items-center mb-24">
-        <img src={logo} alt="Fendous logo" className="w-24 mb-4" />
+        <img src={logo} alt="Fendous logo" className="w-36 mb-4" />
         <p className="text-brand-violet font-bold text-lg tracking-wide">
           {tagline}
         </p>

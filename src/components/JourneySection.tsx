@@ -28,7 +28,7 @@ export default function JourneySection({
   const [activeNode, setActiveNode] = useState<number | null>(null);
 
   return (
-    <section className="min-h-screen text-white flex flex-col items-center justify-center px-12 py-20">
+    <section className="h-[vh80] text-white flex flex-col items-center justify-center px-12 py-20">
       {/* Header */}
       <div className="text-center mb-20">
         <h2 className="text-5xl font-black bg-gradient-to-r from-brand-pink to-brand-violet bg-clip-text text-transparent mb-4">

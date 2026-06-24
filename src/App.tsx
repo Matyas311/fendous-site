@@ -199,7 +199,7 @@ function App() {
         ]}
       />
       <ProductShowcaseSection
-        eyebrow="Celebrating Our Core Product Solution"
+        eyebrow="Celebrating Our Core Product Solution 🎉"
         productName="Fendous.Live"
         tagline="Event Management, Reimagined."
         subtagline="Smart. Seamless. Secure."
@@ -287,10 +287,10 @@ function App() {
         ]}
       />
       <ThankYouSection
-        thankYouHeading="A Big Thank You!"
+        thankYouHeading="🎉A Big Thank You!🎉"
         thankYouMessage="To our clients, partners, team and community for being part of our journey."
         quote="We are no longer just building products. We are building platforms that connect intelligence, trust and execution."
-        closingLine="Here's to the next chapter of innovation and impact."
+        closingLine="Here's to the next chapter of innovation and impact.🎉"
         logo={logoImg}
         tagline="The best is yet to come."
         websiteUrl="fendous.live"

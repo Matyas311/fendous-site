@@ -18,7 +18,7 @@ export default function ExecutionSection({
   cards,
 }: ExecutionSectionProps) {
   return (
-    <section className="min-h-screen text-white flex flex-col items-center justify-center px-12 py-20">
+    <section className="h-[vh80] text-white flex flex-col items-center justify-center px-12 py-20">
       {/* Header */}
       <h2 className="text-4xl font-black tracking-widest uppercase text-white/80 mb-16">
         {heading}

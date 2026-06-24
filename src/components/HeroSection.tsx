@@ -1,4 +1,5 @@
 import logoImg from "../assets/logo.png";
+import { PartyPopper, Balloon } from "lucide-react";
 
 interface HeroSectionProps {
   years: number;
@@ -14,10 +15,20 @@ export default function HeroSection({
   threeIs,
 }: HeroSectionProps) {
   return (
-    <main className="min-h-screen text-white flex flex-col items-center justify-center px-6 py-18 relative">
+    <main className="h-[vh80] text-white flex flex-col items-center justify-center px-6 py-18 relative">
       {/* Logo */}
       <div className="absolute top-6 left-6">
         <img src={logoImg} alt="Logo" className="w-48" />
+      </div>
+
+      <div className="absolute left-16 top-1/2 -translate-y-1/2">
+        <PartyPopper
+          size={500}
+          className="absolute text-brand-purple opacity-40"
+        />
+      </div>
+      <div className="absolute left-330 top-1/2 -translate-y-1/2">
+        <Balloon size={500} className="absolute text-brand-purple opacity-40" />
       </div>
 
       {/* Main title */}
