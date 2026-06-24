@@ -46,7 +46,7 @@ export default function ThankYouSection() {
   ];
 
   return (
-    <section className="text-white flex flex-col items-center justify-center px-12 py-32">
+    <section className="text-white flex flex-col items-center justify-center pt-32">
       {/* Thank You heading + message */}
       <div className="text-center mb-12 max-w-3xl">
         <h2 className="text-4xl font-black text-brand-pink mb-6">
@@ -105,7 +105,7 @@ export default function ThankYouSection() {
       </div>
 
       {/* Footer */}
-      <div className="w-full max-w-5xl border-t border-brand-purple pt-8 flex flex-wrap items-center justify-between gap-6">
+      <div className="w-full border-t border-brand-purple pt-8 flex flex-wrap items-center justify-between gap-6 px-8 pb-4">
         <div className="flex gap-8">
           {footerItems.map((item) => (
             <div
@@ -117,13 +117,13 @@ export default function ThankYouSection() {
             </div>
           ))}
         </div>
-        <a
-          href="https://fendous.live"
-          className="text-white/60 text-sm hover:text-brand-pink transition-colors"
-        >
-          fendous.live
-        </a>
         <div className="flex gap-4">
+          <a
+            href="https://fendous.live"
+            className="text-white/60 text-sm hover:text-brand-pink transition-colors"
+          >
+            fendous.live
+          </a>
           {socialLinks.map((social, i) => (
             <a
               key={i}

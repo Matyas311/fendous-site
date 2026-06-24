@@ -1,5 +1,6 @@
 import logoImg from "../assets/logo.png";
-import { PartyPopper } from "lucide-react";
+import partyPopper from "../assets/partyPopper.png";
+import champagne from "../assets/champagne.png";
 import { useLanguage } from "../context/LanguageContext";
 
 export default function HeroSection() {
@@ -22,9 +23,12 @@ export default function HeroSection() {
         </button>
       </div>
 
-      {/* Party popper */}
-      <div className="absolute left-16 top-1/2 -translate-y-1/2">
-        <PartyPopper size={180} className="text-brand-purple opacity-40" />
+      {/* empty space fills */}
+      <div className="absolute left-16 top-1/1 -translate-y-1/2">
+        <img src={partyPopper} alt="partyPopper" className="w-120" />
+      </div>
+      <div className="absolute left-320 top-1/1 -translate-y-1/2">
+        <img src={champagne} alt="partyPopper" className="w-140" />
       </div>
 
       {/* Main title */}
